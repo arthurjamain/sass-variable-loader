@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "babel ./src -d ./dist",
+    "build": "node ./node_modules/babel-cli/bin/babel-node.js ./src ./dist",
     "test": "mocha --compilers js:babel-core/register",
     "lint": "eslint --ext=.js ./src",
     "prepush": "npm run lint && npm run test",
